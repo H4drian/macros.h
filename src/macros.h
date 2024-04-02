@@ -25,43 +25,58 @@
 
 // inclusion guard
 #ifdef MACRO_H
-#error "Macro.h already included"
+    #error "Macro.h already included"
 #endif
 
 #ifndef MACRO_H
-#define MACRO_H
-//
-
-#ifndef EXIT_SUCCESS
-#define EXIT_SUCCESS 0
-#endif
-
-#ifndef EXIT_FAILURE
-#define EXIT_FAILURE 1
-#endif
-
-#ifndef _STDBOOL_H
-    #ifndef TRUE
-    #define TRUE 1
+    #define MACRO_H
+    
+    #ifndef EXIT_SUCCESS
+        #define EXIT_SUCCESS 0
     #endif
-
-    #ifndef FALSE
-    #define FALSE 0
-     #endif
-#endif 
-#ifdef _STDBOOL_H
-    #ifndef TRUE
-    #define TRUE true
+    
+    #ifndef EXIT_FAILURE
+        #define EXIT_FAILURE 1
     #endif
-
-    #ifndef FALSE
-    #define FALSE FALSE
+    
+    #ifndef _STDBOOL_H
+        #ifndef TRUE
+            #define TRUE 1
+        #endif
+    
+        #ifndef FALSE
+            #define FALSE 0
+        #endif
+    #endif 
+    #ifdef _STDBOOL_H
+        #ifndef TRUE
+            #define TRUE true
+        #endif
+    
+        #ifndef FALSE
+            #define FALSE FALSE
+        #endif
     #endif
-#endif
-
-#ifndef FOREVER
-#define FOREVER ;;
-#endif
-
+    
+    #ifndef FOREVER
+        #define FOREVER ;;
+    #endif
+    
+    #ifndef ZERO
+        #define ZERO 0
+    #endif
+    
+    #ifndef OR
+        #define OR ||
+    #endif
+            
+    #ifndef AND
+        #define AND &&
+    #endif
+            
+    #ifndef NOT
+        #define NOT !
+    #endif
+        
 // end of inclusion guard
 #endif // MACRO_H
