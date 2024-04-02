@@ -40,12 +40,23 @@
 #define EXIT_FAILURE 1
 #endif
 
-#ifndef TRUE
-#define TRUE 1
-#endif
+#ifndef _STDBOOL_H
+    #ifndef TRUE
+    #define TRUE 1
+    #endif
 
-#ifndef FALSE
-#define FALSE 0
+    #ifndef FALSE
+    #define FALSE 0
+     #endif
+#endif 
+#ifdef _STDBOOL_H
+    #ifndef TRUE
+    #define TRUE true
+    #endif
+
+    #ifndef FALSE
+    #define FALSE FALSE
+    #endif
 #endif
 
 #ifndef FOREVER
