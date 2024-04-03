@@ -54,7 +54,7 @@
         #endif
     
         #ifndef FALSE
-            #define FALSE FALSE
+            #define FALSE false
         #endif
     #endif
     
@@ -76,6 +76,18 @@
             
     #ifndef NOT
         #define NOT !
+    #endif
+
+    #ifndef _INC_STDLIB
+        #include <stdlib.h>
+
+        #ifndef NEW
+            #define NEW(type) ((type)malloc(sizeof(type))
+        #endif
+
+        #ifndef DELETE
+            #define DELETE(ptr) (free(ptr))
+        #endif
     #endif
         
 // end of inclusion guard
