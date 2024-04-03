@@ -82,7 +82,7 @@
         #include <stdlib.h>
 
         #ifndef NEW
-            #define NEW(type) (type)malloc(sizeof(type))
+            #define NEW(type) (type*)malloc(sizeof(type))
         #endif
 
         #ifndef DELETE
