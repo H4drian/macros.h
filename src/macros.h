@@ -24,12 +24,12 @@
 
 
 // inclusion guard
-#ifdef MACRO_H
-    #error "Macro.h already included"
+#ifdef MACROS_H
+    #error "macros.h already included"
 #endif
 
-#ifndef MACRO_H
-    #define MACRO_H
+#ifndef MACROS_H
+    #define MACROS_H
     
     #ifndef EXIT_SUCCESS
         #define EXIT_SUCCESS 0
@@ -82,7 +82,7 @@
         #include <stdlib.h>
 
         #ifndef NEW
-            #define NEW(type) ((type)malloc(sizeof(type))
+            #define NEW(type) (type)malloc(sizeof(type))
         #endif
 
         #ifndef DELETE
@@ -91,4 +91,4 @@
     #endif
         
 // end of inclusion guard
-#endif // MACRO_H
+#endif // MACROS_H
