@@ -89,6 +89,10 @@
             #define DELETE(ptr) (free(ptr))
         #endif
     #endif
+
+    #ifndef ARGS
+        #define ARGS int argc, char* argv[]
+    #endif
         
 // end of inclusion guard
 #endif // MACROS_H
